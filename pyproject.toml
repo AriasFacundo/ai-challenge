@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ai-engineer-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Facundo Arias <facundoarias1892@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+uvicorn = "^0.23.2"
+langserve = {extras = ["all"], version = "^0.3.0"}
+pydantic = ">2.7"
+langchain-openai = "^0.2.6"
+python-decouple = "^3.8"
+langchain = "^0.3.7"
+langchain-community = "^0.3.5"
+langchain-ollama = "^0.2.0"
+pypdf = "^5.1.0"
+chromadb = "^0.5.18"
+
+
+[tool.poetry.group.dev.dependencies]
+langchain-cli = ">=0.0.15"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
